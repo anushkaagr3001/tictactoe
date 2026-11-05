@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | AI Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="game-container">
+    <header class="header">
+        <div class="logo">TIC<span>TAC</span>TOE.</div>
+        <p class="subtitle">THE ULTIMATE AI CHALLENGE</p>
+    </header>
+
+    <section class="game-card">
+        <div class="row"><span class="section-label">MODE</span>
+            <div class="seg" data-key="mode">
+                <button data-v="ai">vs AI</button><button data-v="pvp">2 Players</button>
+            </div>
+        </div>
+        <div class="row"><span class="section-label">BOARD</span>
+            <div class="seg" data-key="size">
+                <button data-v="3">3×3</button><button data-v="4">4×4</button><button data-v="5">5×5</button>
+            </div>
+        </div>
+        <div class="row" id="diffRow"><span class="section-label">DIFFICULTY</span>
+            <div class="seg" data-key="diff">
+                <button data-v="easy">Easy</button><button data-v="medium">Medium</button><button data-v="hard">Hard</button>
+            </div>
+        </div>
+        <div class="row" id="meRow"><span class="section-label">PLAY AS</span>
+            <div class="seg" data-key="me">
+                <button data-v="X">X (first)</button><button data-v="O">O (second)</button>
+            </div>
+        </div>
+
+        <div class="scoreboard">
+            <div class="score-box" id="boxA"><span class="symbol" id="symA">X</span><span class="score-label" id="lblA">YOU</span><span class="score" id="scoreA">0</span></div>
+            <div class="score-box"><span class="symbol">=</span><span class="score-label">DRAWS</span><span class="score" id="scoreD">0</span></div>
+            <div class="score-box" id="boxB"><span class="symbol" id="symB">O</span><span class="score-label" id="lblB">AI</span><span class="score" id="scoreB">0</span></div>
+        </div>
+
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+        <div class="meta"><span id="rule"></span><span id="streak"></span></div>
+
+        <div class="board" id="board" role="grid" aria-label="Game board"></div>
+
+        <div class="controls">
+            <button id="undoBtn">↶ Undo</button>
+            <button id="hintBtn">💡 Hint</button>
+            <button id="nextBtn" class="primary">↻ New Round</button>
+        </div>
+        <div class="controls small">
+            <button id="resetBtn">Reset Scores</button>
+            <button id="muteBtn" aria-label="Toggle sound">🔊</button>
+        </div>
+        <p class="keys">Keys: 1-9 place · U undo · H hint · R new round</p>
+    </section>
+
+    <footer>MINIMAX + ALPHA-BETA PRUNING</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
